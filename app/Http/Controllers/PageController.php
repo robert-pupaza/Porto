@@ -12,9 +12,6 @@ class PageController extends BaseController
     public function showServices(){
         return view('pages.services');
     }
-    public function showPortfolio(){
-        return view('pages.portfolio');
-    }
     public function showAboutWork(){
         return view('pages.aboutWork');
     }

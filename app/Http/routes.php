@@ -13,7 +13,7 @@
 
 Route::get('/', ['as' => 'pages.home', 'uses' => 'PageController@showHome']);
 Route::get('/services', ['as' => 'pages.services', 'uses' => 'PageController@showServices']);
-Route::get('/portfolio', ['as' => 'pages.portfolio', 'uses' => 'PageController@showPortfolio']);
+Route::get('/portfolio', ['as' => 'pages.portfolio', 'uses' => 'PortfolioController@showPortfolio']);
 Route::get('/about-work', ['as' => 'pages.aboutWork', 'uses' => 'PageController@showAboutWork']);
 Route::get('/about-me', ['as' => 'pages.aboutMe', 'uses' => 'PageController@showAboutMe']);
 Route::get('/contact', ['as' => 'pages.contact', 'uses' => 'PageController@showContact']);
@@ -25,6 +25,9 @@ Route::get('/project4', ['as' => 'ajax.porfolio-ajax-project-4', 'uses' => 'Ajax
 Route::get('/project5', ['as' => 'ajax.porfolio-ajax-project-5', 'uses' => 'AjaxController@showProject5']);
 Route::get('/project6', ['as' => 'ajax.porfolio-ajax-project-6', 'uses' => 'AjaxController@showProject6']);
 Route::get('/project7', ['as' => 'ajax.porfolio-ajax-project-7', 'uses' => 'AjaxController@showProject7']);
+
+
+Route::get('/portfolio/create', ['as' => 'pages.portfolio.create', 'uses' => 'PortfolioController@store']);
 
 
 

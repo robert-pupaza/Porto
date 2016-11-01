@@ -44,6 +44,7 @@ return [
     |
     */
 
+
     'connections' => [
 
         'sqlite' => [
@@ -54,10 +55,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'devmiles'),
-            'username'  => env('DB_USERNAME', 'root'),
-            'password'  => env('DB_PASSWORD', ''),
+            'host'      => env('DB_HOST', '95.85.59.118'),
+            'database'  => env('DB_DATABASE', 'admin_spiderweb'),
+            'username'  => env('DB_USERNAME', 'admin_spiderweb'),
+            'password'  => env('DB_PASSWORD', 'rasengan1992'),
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
