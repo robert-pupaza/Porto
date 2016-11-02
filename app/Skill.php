@@ -8,6 +8,6 @@ class Skill extends Model
 {
     //
     public function portfolios(){
-        return $this -> morphedByMany('App\Portfolio', 'portfolio_skill');
+        return $this -> morphedByMany('App\Portfolio', 'skillable');
     }
 }
