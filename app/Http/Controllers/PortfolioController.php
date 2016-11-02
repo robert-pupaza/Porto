@@ -13,7 +13,7 @@ class PortfolioController extends Controller
     public function showPortfolio(){
 
 
-        $portfolio = Portfolio::with('skills', 'images')->get();
+        $portfolio = Portfolio::with('skills', 'images')->take(1)->get();
 
         /*print_r($portfolio);*/
 
