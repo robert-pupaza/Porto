@@ -36,18 +36,27 @@
 
 					<div class="row">
 						<ul class="portfolio-list sort-destination popup-gallery-ajax" data-sort-id="portfolio">
-                            <?php print_r($portfolio)?>
+                            <!--<?php print_r($portfolio)?>-->
 							@foreach($portfolio as $port)
-                            @foreach($port->skills() as skill)
-                            {{$skill->id}}
+                            {{$port->images(0)->url}}
+                            @foreach($port->images as $k => $image)
+                            @if($k == 0)
+                            {{$image->url}}
+                            @endif
                             @endforeach
+                            @foreach($port->skills as $k => $skill)
+                            @if($k == 0)
+                            {{$skill->name}}
+                            @endif
+                            @endforeach
+
 
                                 <li class="col-md-3 col-sm-6 col-xs-12 isotope-item brands">
                                     <div class="portfolio-item">
                                         <a href="{{URL::asset('project1')}}" data-ajax-on-modal>
                                             <span class="thumb-info thumb-info-lighten">
                                                 <span class="thumb-info-wrapper">
-                                                    <img src="img/projects/project.jpg" class="img-responsive" alt="">
+                                                    <img src="" class="img-responsive" alt="">
                                                     <span class="thumb-info-title">
                                                         <span class="thumb-info-inner"> {{ $port->name }}</span>
                                                         <span class="thumb-info-type">Brand</span>

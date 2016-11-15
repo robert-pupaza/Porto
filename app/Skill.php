@@ -1,13 +1,12 @@
 <?php
-
-namespace App;
+namespace app;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Skill extends Model
 {
     //
-    public function portfolios(){
-        return $this -> morphedByMany('App\Portfolio', 'skillable');
+    public function skillable(){
+        return $this -> morphedTo();
     }
 }

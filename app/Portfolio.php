@@ -10,7 +10,7 @@ class Portfolio extends Model
     protected $fillable = ['name', 'description', 'url', 'category_id'];
     public function skills()
     {
-        return $this->morphToMany('App\Skill', 'skillable');
+        return $this->morphMany('App\Skill', 'skillable');
     }
     public function images()
     {

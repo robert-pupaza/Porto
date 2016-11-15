@@ -13,9 +13,9 @@ class PortfolioController extends Controller
     public function showPortfolio(){
 
 
-        $portfolio = Portfolio::with('skills', 'images')->take(1)->get();
+        $portfolio = Portfolio::with('skills', 'images')->get();
 
-        /*print_r($portfolio);*/
+        print_r($portfolio);
 
         /*return response()->json($portfolio);*/
         return view('pages.portfolio')->with('portfolio', $portfolio);
