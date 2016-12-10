@@ -5,7 +5,6 @@ use App\Portfolio;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
 
 class PortfolioController extends Controller
 {
@@ -18,7 +17,7 @@ class PortfolioController extends Controller
         print_r($portfolio);
 
         /*return response()->json($portfolio);*/
-        return view('pages.portfolio')->with('portfolio', $portfolio);
+        return view('pages.portfolio')->with('portfolio', $portfolio->toArray());
     }
 
     public function store(Request $request){
